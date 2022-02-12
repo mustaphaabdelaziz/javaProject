@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="200.0" prefWidth="1000.0" style="-fx-background-color: whit;" stylesheets="@../StyleCSS.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dgsescuela.Etudiants.FXMLConfermationSuppressionController">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="210.0" prefWidth="260.0" style="-fx-border-color: black; -fx-border-width: 5;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label text="Veuillez introduire votre mot de passe pour confirmer la suppression" textFill="#41af3a">
+               <font>
+                  <Font name="Berlin Sans FB" size="24.0" />
+               </font></Label>
+            <HBox alignment="CENTER" prefHeight="40.0" spacing="5.0" style="-fx-border-color: #FF1493; -fx-border-width: 0px 0px 0px 0px;">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" preserveRatio="true">
+                     <image>
+                        <Image url="@../ImagePackage/icons8_Add_User_Male_50px.png" />
+                     </image>
+                  </ImageView>
+                  <JFXTextField fx:id="Nom_utilisateur" focusColor="#3d81ee" prefHeight="25.0" prefWidth="190.0" style="-fx-background-color: transparent; -fx-prompt-text-fill: #41af3a;" unFocusColor="DEEPPINK" />
+               </children>
+               <VBox.margin>
+                  <Insets top="50.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="40.0" spacing="5.0" style="-fx-border-color: #FF1493; -fx-border-width: 0px 0px 0px 0px;">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" preserveRatio="true">
+                     <image>
+                        <Image url="@../ImagePackage/icons8_Lock_50px_1.png" />
+                     </image></ImageView>
+                  <JFXPasswordField fx:id="mot_passe" focusColor="#3d81ee" labelFloat="true" prefHeight="25.0" prefWidth="190.0" promptText="Mot de Passe" style="-fx-background-color: transparent; -fx-prompt-text-fill: #41af3a;" unFocusColor="DEEPPINK" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="20.0" top="25.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <JFXButton fx:id="connecter2" onMouseClicked="#Confermer" prefHeight="23.0" prefWidth="250.0" ripplerFill="#3d81ee" text="Confirmer">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fitHeight="33.0" fitWidth="50.0" nodeOrientation="INHERIT" preserveRatio="true">
+                           <image>
+                              <Image url="@../ImagePackage/icons8_Ok_50px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="btnClose" onMouseClicked="#quit" prefHeight="23.0" prefWidth="250.0" ripplerFill="#3d81ee" text="Annuler">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fitHeight="33.0" fitWidth="50.0" nodeOrientation="INHERIT" preserveRatio="true">
+                           <image>
+                              <Image url="@../ImagePackage/icons8_Delete_Bin_50px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="10.0" top="30.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>

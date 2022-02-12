@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="800.0" styleClass="ajouter" stylesheets="@../StyleCSS.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dgsescuela.Etudiants.FXMLModifierController">
+   <children>
+      <VBox alignment="TOP_CENTER" fillWidth="false" prefHeight="600.0" prefWidth="727.0" spacing="20.0" style="-fx-background-radius: 20;" styleClass="vbox" stylesheets="@../StyleCSS.css" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0">
+         <children>
+            <Label text="Modifier un Etudiant" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="30.0" />
+               </font>
+            </Label>
+            <Label fx:id="isEmpty" alignment="CENTER" prefHeight="17.0" prefWidth="199.0" />
+            <HBox alignment="CENTER" fillHeight="false" prefHeight="288.0" prefWidth="770.0" spacing="30.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="167.0" prefWidth="192.0" spacing="20.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="130.0" prefWidth="166.0" style="-fx-border-style: solid; -fx-border-width: 1; -fx-border-color: white;">
+                           <children>
+                              <ImageView fx:id="fxImageCondidat" fitHeight="140.0" fitWidth="210.0" pickOnBounds="true" preserveRatio="true" style="-fx-border-style: solid; -fx-border-width: 5px; -fx-border-radius: 10;">
+                                 <image>
+                                    <Image url="@../ImagePackage/formation.jpg" />
+                                 </image>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </VBox>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="205.0" prefWidth="250.0" spacing="20.0">
+                     <children>
+                        <JFXTextField fx:id="fxIdEtudiant" alignment="TOP_LEFT" focusColor="BLACK" labelFloat="true" onKeyPressed="#Clavier" prefHeight="25.0" prefWidth="426.0" promptText="N° Carte d'Identité" style="-fx-background-color: white;" unFocusColor="BLACK">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="Arial Bold" size="16.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="fxNomEtudiant" alignment="TOP_LEFT" focusColor="BLACK" labelFloat="true" onKeyPressed="#Clavier" prefHeight="25.0" prefWidth="426.0" promptText="Nom" style="-fx-background-color: white;" unFocusColor="BLACK">
+                           <font>
+                              <Font name="Arial Bold" size="16.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="fxPrenomEtudiant" alignment="TOP_LEFT" focusColor="BLACK" labelFloat="true" onKeyPressed="#Clavier" prefHeight="25.0" prefWidth="426.0" promptText="Prenom" style="-fx-background-color: white;" unFocusColor="BLACK">
+                           <font>
+                              <Font name="Arial Bold" size="16.0" />
+                           </font>
+                        </JFXTextField>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="205.0" prefWidth="250.0" spacing="20.0">
+                     <children>
+                        <DatePicker fx:id="fxDate" prefHeight="40.0" prefWidth="250.0" promptText="Date d'Ajout" />
+                        <JFXTextField fx:id="fxTELEtudiant" alignment="TOP_LEFT" focusColor="BLACK" labelFloat="true" onKeyPressed="#Clavier" prefHeight="25.0" prefWidth="426.0" promptText="Telephone" style="-fx-background-color: white;" unFocusColor="BLACK">
+                           <font>
+                              <Font name="Arial Bold" size="16.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="fxEmailEtudiant" alignment="TOP_LEFT" focusColor="BLACK" labelFloat="true" onKeyPressed="#Clavier" prefHeight="25.0" prefWidth="426.0" promptText="Email" style="-fx-background-color: white;" unFocusColor="BLACK">
+                           <font>
+                              <Font name="Arial Bold" size="16.0" />
+                           </font>
+                        </JFXTextField>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <JFXButton onAction="#ModifierEtudiant" onKeyPressed="#Clavier" onMouseClicked="#ModifierEtudiant" prefHeight="86.0" prefWidth="218.0" text="Valider" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets bottom="10.0" top="20.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>
